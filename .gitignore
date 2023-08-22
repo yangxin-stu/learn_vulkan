@@ -104,3 +104,4 @@ tests/windows
 # vscode settings
 .vscode
 .git
+build

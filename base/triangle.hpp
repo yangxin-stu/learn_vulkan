@@ -31,3 +31,16 @@
 #include <set>
 #include <unordered_map>
 
+// log 
+#include <spdlog/spdlog.h>
+#include <spdlog/sinks/stdout_color_sinks.h>
+
+#ifdef NDEBUG
+#define VK_CHECK(x) 
+
+#define enableValidationLayers 1
+#else 
+#define VK_CHECK(x) 
+
+#define enableValidationLayers 0
+#endif

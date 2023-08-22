@@ -18,6 +18,8 @@ file(GLOB_RECURSE sources CONFIGURE_DEPENDS src/*.cpp)
 file(GLOB_RECURSE headers CONFIGURE_DEPENDS base/*.h base/*.hpp)
 
 find_package(Vulkan REQUIRED)
+
+
 add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DNOMINMAX -D_USE_MATH_DEFINES")
 IF(MSVC)
@@ -47,6 +49,7 @@ target_include_directories(main PUBLIC vendor/tinyobjloader)
 target_include_directories(main PUBLIC vendor/ktx/include)
 target_include_directories(main PUBLIC vendor/ktx/utils)
 target_include_directories(main PUBLIC vendor/ktx/other_include)
+target_include_directories(main PUBLIC vendor/spdlog/include)
 # add_subdirectory(base)
 # add_subdirectory(src)
 
@@ -56,11 +59,15 @@ target_include_directories(main PUBLIC vendor/ktx/other_include)
 target_include_directories(main PRIVATE ${Vulkan_INCLUDE_DIR})
 target_link_libraries(main ${Vulkan_LIBRARIES})
 
-# # add_subdirectory(glm)
-# # target_link_libraries(main PUBLIC glm)
 
+# glfw
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/vendor/glfw)
 target_link_libraries(main glfw)
+
+# spdlog
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/vendor/spdlog)
+
+target_link_libraries(main spdlog::spdlog)
 
 # # add_subdirectory(glad)
 # # target_link_libraries(main PUBLIC glad)
