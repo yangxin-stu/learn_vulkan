@@ -21,6 +21,7 @@ find_package(Vulkan REQUIRED)
 
 
 add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+add_definitions(-DNDBUG)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DNOMINMAX -D_USE_MATH_DEFINES")
 IF(MSVC)
 	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc")

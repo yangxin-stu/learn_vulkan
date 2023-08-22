@@ -105,3 +105,14 @@ tests/windows
 .vscode
 .git
 build
+
+# verdor
+vendor/glfw/*
+vendor/gltf/*
+vendor/imgui/*
+vendor/ktx/*
+vendor/openexr/*
+vendor/openvdb/*
+vendor/spdlog/*
+vendor/std/*
+vendor/tinyobjloader/*
