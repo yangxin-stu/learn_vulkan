@@ -25,3 +25,9 @@
 [submodule "vendor/openexr"]
 	path = vendor/openexr
 	url = https://github.com/AcademySoftwareFoundation/openexr.git
+[submodule "vendor/json"]
+	path = vendor/json
+	url = https://github.com/nlohmann/json.git
+[submodule "vendor/openUSD"]
+	path = vendor/openUSD
+	url = https://github.com/PixarAnimationStudios/OpenUSD.git

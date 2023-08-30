@@ -116,3 +116,7 @@ vendor/openvdb/*
 vendor/spdlog/*
 vendor/std/*
 vendor/tinyobjloader/*
+vendor/json/*
+vendor/openUSD/*
+
+predefine/*
